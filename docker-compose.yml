@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  promobot:
+    build: .
+    container_name: telegram-promobot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./bot.log:/app/bot.log
